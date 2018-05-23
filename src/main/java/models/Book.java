@@ -1,28 +1,30 @@
 package models;
 
-<<<<<<< HEAD
-public class Book extends Item {
-=======
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="books")
 public class  Book extends Item {
 
     private String author;
-    private String Title;
-    private String Publisher;
+    private String title;
+    private String publisher;
 
 
-    public Book(String description, String author, String title, String publisher) {
-        super(description);
+    public Book(String description, Library library, String author, String title, String publisher) {
+        super(description, library);
         this.author = author;
-        Title = title;
-        Publisher = publisher;
+        this.title = title;
+        this.publisher = publisher;
     }
 
      public Book(){
 
      }
 
-
-
+     @Column(name="author")
     public String getAuthor() {
         return author;
     }
@@ -30,21 +32,21 @@ public class  Book extends Item {
     public void setAuthor(String author) {
         this.author = author;
     }
+    @Column(name="title")
 
     public String getTitle() {
-        return Title;
+        return title;
     }
 
     public void setTitle(String title) {
-        Title = title;
+        this.title = title;
     }
-
+    @Column(name="publisher")
     public String getPublisher() {
-        return Publisher;
+        return publisher;
     }
 
     public void setPublisher(String publisher) {
-        Publisher = publisher;
+        this.publisher = publisher;
     }
->>>>>>> 07862a9de463e52e5fd08c87c406e3790fd95b73
 }
