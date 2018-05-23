@@ -13,8 +13,8 @@ public class BookTest {
     @Before
     public void before(){
     Library library = new Library("The John Muir library");
-
-    book1 = new Book("A fantasy book", library, "The Lord Of The Rings", "J.R.R Tolkien", "Ladybug");
+        book1 = new Book("A fantasy book", library, "The Lord Of The Rings", "J.R.R Tolkien", "Ladybug");
+    }
     @Test
     public void canGetDescription(){
         assertEquals("A fantasy book", book1.getDescription());
