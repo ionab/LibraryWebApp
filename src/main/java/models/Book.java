@@ -1,8 +1,5 @@
 package models;
 
-<<<<<<< HEAD
-public class Book extends Item {
-=======
 public class  Book extends Item {
 
     private String author;
@@ -46,5 +43,4 @@ public class  Book extends Item {
     public void setPublisher(String publisher) {
         Publisher = publisher;
     }
->>>>>>> 07862a9de463e52e5fd08c87c406e3790fd95b73
 }
