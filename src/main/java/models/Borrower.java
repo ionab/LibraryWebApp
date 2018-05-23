@@ -24,7 +24,6 @@ public class Borrower {
         this.name = name;
     }
 
-
     public Set<Book> getBooks() {
         return books;
     }
@@ -39,5 +38,9 @@ public class Borrower {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int numberOfBooks() {
+        return this.books.size();
     }
 }
