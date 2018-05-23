@@ -1,4 +1,5 @@
 import models.Book;
+import models.Library;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +11,9 @@ public class BookTest {
 
     @Before
     public void before(){
-        book1 = new Book("A fantasy book", "The Lord Of The Rings", "J.R.R Tolkien", "Ladybug");
+        Library library = new Library("The John Muir library");
+
+        book1 = new Book("A fantasy book", library, "The Lord Of The Rings", "J.R.R Tolkien", "Ladybug");
     }
 
     @Test
