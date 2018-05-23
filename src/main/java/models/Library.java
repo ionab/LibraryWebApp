@@ -1,8 +1,11 @@
 package models;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
+@Table(name="libraries")
 public class Library {
 
     private int id;
@@ -18,7 +21,8 @@ public class Library {
 
     public Library() {
     }
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getId() {
         return id;
     }
@@ -35,6 +39,8 @@ public class Library {
         this.name = name;
     }
 
+    @ManyToOne
+    @JoinColumn(name = "library")
     public Set<Book> getBooks() {
         return books;
     }
@@ -42,7 +48,8 @@ public class Library {
     public void setBooks(Set<Book> books) {
         this.books = books;
     }
-
+    @ManyToOne
+    @JoinColumn(name = "library")
     public Set<Borrower> getBorrowers() {
         return borrowers;
     }
